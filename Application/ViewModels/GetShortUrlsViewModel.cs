@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using Domain.Entities;
+﻿using Application.Dtos;
 
 namespace Application.ViewModels
 {
-    public class GetLinksViewModel
+    public class GetShortUrlsViewModel
     {
         public class Request
         {
@@ -12,7 +11,7 @@ namespace Application.ViewModels
         }
         public class Response
         {
-            public IList<LinkMapper> Links;
+            public GetShortUrlsDto GetShortUrlsDto { get; set; }
         }
     }
 }

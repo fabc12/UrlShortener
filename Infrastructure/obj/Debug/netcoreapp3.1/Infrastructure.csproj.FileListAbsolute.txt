@@ -14,3 +14,5 @@ C:\Users\Nima Yaqmuri\Documents\Rider\UrlShortener\Infrastructure\obj\Debug\netc
 C:\Users\Nima Yaqmuri\Documents\Rider\UrlShortener\Infrastructure\obj\Debug\netcoreapp3.1\staticwebassets\Infrastructure.StaticWebAssets.xml
 C:\Users\Nima Yaqmuri\Documents\Rider\UrlShortener\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
 C:\Users\Nima Yaqmuri\Documents\Rider\UrlShortener\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
+C:\Users\Nima Yaqmuri\Documents\Rider\UrlShortener\Infrastructure\bin\Debug\netcoreapp3.1\Application.dll
+C:\Users\Nima Yaqmuri\Documents\Rider\UrlShortener\Infrastructure\bin\Debug\netcoreapp3.1\Application.pdb

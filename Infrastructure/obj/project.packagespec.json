@@ -16,8 +16,8 @@
     "frameworks": {
       "netcoreapp3.1": {
         "projectReferences": {
-          "C:\\Users\\Nima Yaqmuri\\Documents\\Rider\\UrlShortener\\Domain\\Domain.csproj": {
-            "projectPath": "C:\\Users\\Nima Yaqmuri\\Documents\\Rider\\UrlShortener\\Domain\\Domain.csproj"
+          "C:\\Users\\Nima Yaqmuri\\Documents\\Rider\\UrlShortener\\Application\\Application.csproj": {
+            "projectPath": "C:\\Users\\Nima Yaqmuri\\Documents\\Rider\\UrlShortener\\Application\\Application.csproj"
           }
         }
       }

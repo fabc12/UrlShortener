@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qFTNmD0pebjhwBjPFQ7pIRI8NFZIeVwxyplNqHEJI9Y/O85Qa1VagR/hXHKc6PO/mXNy+h3ewulfcIS9ys9iIQ==",
+  "dgSpecHash": "iyZPcdMmg7muf9B5MnDzOy5Vrk4Lu9GS13V8JbSl+uslfP1dLE4KbOEGTWbdwen0/zmLkjqdC9r9q3TT5YQS4w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nima Yaqmuri\\Documents\\Rider\\UrlShortener\\WebApi\\WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.0-rc.2.20475.6\\microsoft.entityframeworkcore.5.0.0-rc.2.20475.6.nupkg.sha512",
     "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.0-rc.2.20475.6\\microsoft.entityframeworkcore.abstractions.5.0.0-rc.2.20475.6.nupkg.sha512",
     "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.0-rc.2.20475.6\\microsoft.entityframeworkcore.analyzers.5.0.0-rc.2.20475.6.nupkg.sha512",
@@ -22,6 +25,7 @@
     "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\system.collections.immutable\\5.0.0-rc.2.20475.5\\system.collections.immutable.5.0.0-rc.2.20475.5.nupkg.sha512",
     "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0-rc.2.20475.5\\system.componentmodel.annotations.5.0.0-rc.2.20475.5.nupkg.sha512",
     "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0-rc.2.20475.5\\system.diagnostics.diagnosticsource.5.0.0-rc.2.20475.5.nupkg.sha512",
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
     "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
   "logs": []

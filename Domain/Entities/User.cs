@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities
 {
@@ -10,14 +8,5 @@ namespace Domain.Entities
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
-    }
-    public class LinkMapper
-    {
-        public string Email { get; set; }
-        [ForeignKey("Email")]
-
-        public string OriginalLink { get; set; }
-        [Key]
-        public string ShortLink { get; set; }
     }
 }

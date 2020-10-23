@@ -7,6 +7,12 @@
       <e p="Application" t="IncludeRecursive">
         <e p="Application.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Dtos" t="Include">
+          <e p="GetShortUrlsDto.cs" t="Include" />
+        </e>
+        <e p="Mapping" t="Include">
+          <e p="MapperConfig.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -16,15 +22,16 @@
         </e>
         <e p="ViewModels" t="Include">
           <e p="AddUserViewModel.cs" t="Include" />
-          <e p="GetLinksViewModel.cs" t="Include" />
-          <e p="GetOriginalLinkViewModel.cs" t="Include" />
-          <e p="GetShortLinkViewModel.cs" t="Include" />
+          <e p="GetOriginalUrlViewModel.cs" t="Include" />
+          <e p="GetShortUrlsViewModel.cs" t="Include" />
+          <e p="GetShortUrlViewModel.cs" t="Include" />
         </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Domain.csproj" t="IncludeRecursive" />
         <e p="Entities" t="Include">
+          <e p="UrlMapper.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">

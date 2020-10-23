@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "lybk6UHqQ9hX2/MMkPYGtPz/uyVDAapBehPJUIkeepg9JQA5T8+nZgc5FsrVNEKXgFJx8WFtC84HiITp+geGxw==",
+  "dgSpecHash": "KU/2uJMs3PAJfhzpH6z0FW5SR/ytY++zjSHh3WuAu9UB93qlViOiMl/ThzeHaVfmLACtVGnk7LjA9klCvt+Nig==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nima Yaqmuri\\Documents\\Rider\\UrlShortener\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.0\\microsoft.extensions.dependencyinjection.abstractions.3.0.0.nupkg.sha512",
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\microsoft.extensions.options\\3.0.0\\microsoft.extensions.options.3.0.0.nupkg.sha512",
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.0\\microsoft.extensions.primitives.3.0.0.nupkg.sha512",
+    "C:\\Users\\Nima Yaqmuri\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

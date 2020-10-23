@@ -1,29 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using Domain.Entities;
 using Infrastructure.Persistence;
 using Infrastructure.Utilities;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Microsoft.EntityFrameworkCore;
+using Application.Dtos;
+using AutoMapper;
 
 namespace Infrastructure.Services
 {
     public interface IUserService
     {
         public bool AddUser(string email, string password);
-        public string GetShortLink(string email, string originalLink);
-        public string GetOriginalLink(string email, string shortLink);
-        public IList<LinkMapper> GetLinks(string email, string password);
+        public string GetShortUrl(string email, string originalUrl);
+        public string GetOriginalUrl(string email, string shortUrl);
+        public GetShortUrlsDto GetShortUrls(string email, string password);
     }
 
     public class UserService : IUserService
     {
         private readonly DatabaseContext _dbContext;
+        private readonly IMapper _mapper;
+        private readonly IKeyGenerator _keyGenerator;
 
-        public UserService(DatabaseContext dbContext)
+        public UserService(DatabaseContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
+            _mapper = mapper;
+            _keyGenerator = new KeyGenerator();
         }
 
         public bool AddUser(string email, string password)
@@ -39,41 +41,40 @@ namespace Infrastructure.Services
             return true;
         }
 
-        public string GetShortLink(string email, string originalLink)
+        public string GetShortUrl(string email, string originalUrl)
         {
             var user = _dbContext.User.Find(email);
             if (user == null) return null;
-            var obj = _dbContext.LinkMapper
-                .FirstOrDefault(l => l.Email == email && l.OriginalLink == originalLink);
-            if (obj != null) return obj.ShortLink;
-            // Generate Key 
-            var keyGenerator = new KeyGenerator(_dbContext.LinkMapper.Select(s => s.ShortLink).ToList());
-            var shortLink = keyGenerator.GenerateKey(6);
-            _dbContext.LinkMapper.Add(new LinkMapper
+            var obj = _dbContext.UrlMapper
+                .FirstOrDefault(l => l.Email == email && l.OriginalUrl == originalUrl);
+            if (obj != null) return obj.ShortUrl;
+            // Generate Key
+            var shortUrl = _keyGenerator.GenerateKey(6);
+            _dbContext.UrlMapper.Add(new UrlMapper
             {
                 Email = email,
-                OriginalLink = originalLink,
-                ShortLink = shortLink
+                OriginalUrl = originalUrl,
+                ShortUrl = shortUrl
             });
             _dbContext.SaveChanges();
-            return shortLink;
+            return shortUrl;
         }
 
-        public string GetOriginalLink(string email, string shortLink)
+        public string GetOriginalUrl(string email, string shortUrl)
         {
             var user = _dbContext.User.Find(email);
             if (user == null) return null;
-            var obj = _dbContext.LinkMapper
-                .FirstOrDefault(l => l.Email == email && l.ShortLink == shortLink);
-            return (obj != null) ? obj.OriginalLink : null;
+            var obj = _dbContext.UrlMapper
+                .FirstOrDefault(l => l.Email == email && l.ShortUrl == shortUrl);
+            return obj?.OriginalUrl;
         }
 
-        public IList<LinkMapper> GetLinks(string email, string password)
+        public GetShortUrlsDto GetShortUrls(string email, string password)
         {
             var user = _dbContext.User.Find(email);
             if (user == null || user.Password != password) return null;
-            var obj = _dbContext.LinkMapper.Where(l => l.Email == email);
-            return obj.ToList();
+            var obj = _dbContext.UrlMapper.Where(l => l.Email == email).ToList();
+            return _mapper.Map<GetShortUrlsDto>(obj);
         }
     }
 }

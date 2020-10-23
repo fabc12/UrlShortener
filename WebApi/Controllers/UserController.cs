@@ -22,27 +22,27 @@ namespace WebApi.Controllers
             });
         }
 
-        public IActionResult GetShortLink(GetShortLinkViewModel.Request request)
+        public IActionResult GetShortUrl(GetShortUrlViewModel.Request request)
         {
-            return Json(new GetShortLinkViewModel.Response
+            return Json(new GetShortUrlViewModel.Response
             {
-                ShortLink = _userService.GetShortLink(request.Email, request.OriginalLink)
+                ShortUrl = _userService.GetShortUrl(request.Email, request.OriginalUrl)
             });
         }
 
-        public IActionResult GetOriginalLink(GetOriginalLinkViewModel.Request request)
+        public IActionResult GetOriginalUrl(GetOriginalUrlViewModel.Request request)
         {
-            return Json(new GetOriginalLinkViewModel.Response
+            return Json(new GetOriginalUrlViewModel.Response
             {
-                OriginalLink = _userService.GetOriginalLink(request.Email, request.ShortLink)
+                OriginalUrl = _userService.GetOriginalUrl(request.Email, request.ShortUrl)
             });
         }
 
-        public IActionResult GetLinks(GetLinksViewModel.Request request)
+        public IActionResult GetShortUrls(GetShortUrlsViewModel.Request request)
         {
-            return Json(new GetLinksViewModel.Response
+            return Json(new GetShortUrlsViewModel.Response
             {
-                Links = _userService.GetLinks(request.Email, request.Password)
+                GetShortUrlsDto = _userService.GetShortUrls(request.Email, request.Password)
             });
         }
     }

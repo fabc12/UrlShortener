@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application.Mapping;
+using AutoMapper;
 using Infrastructure.Persistence;
 using Infrastructure.Services;
+using Infrastructure.Utilities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -25,6 +28,7 @@ namespace WebApi
             {
                 options.UseNpgsql("Host=127.0.0.1;Database=UrlShortener;Username=postgres;Password=dfkk");
             });
+            services.AddAutoMapper(typeof(MapperConfig));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
